@@ -36,8 +36,8 @@ resource "google_compute_instance" "default" {
  
   metadata = {
     foo = "bar"
-    serial-port-enable = "FALSE"
-    block-project-ssh-keys="TRUE"
+    serial-port-enable = false
+    block-project-ssh-keys= TRUE
   }
 
 
