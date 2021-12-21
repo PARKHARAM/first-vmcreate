@@ -37,6 +37,8 @@ resource "google_compute_instance" "default" {
   metadata = {
     foo = "bar"
   }
+
+  
   service_account {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
     scopes = ["cloud-platform"]
