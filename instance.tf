@@ -7,9 +7,6 @@ provider "google" {
   zone    = "asia-northeast3-a"
 }
 
-data "google_compute_default_service_account" "default" {
-}
-
 resource "google_compute_instance" "default" {
   name         = var.VM_NAME
   machine_type = var.VM_MACHINE_TYPE
@@ -42,8 +39,7 @@ resource "google_compute_instance" "default" {
   }
   service_account {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-    email  = google_compute_default_service_account.default.email
-   
+    scopes = ["cloud-platform"]
   }
 
 
