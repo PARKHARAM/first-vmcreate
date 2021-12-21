@@ -20,7 +20,7 @@ resource "google_compute_instance" "default" {
 
 
 
-  tags = ["sgtag-jenkins-ssh", "sgtag-jenkins-web","sgtag-jenkins-instance" ]
+  tags = ["sgtag-jenkins-ssh", "sgtag-jenkins-web","sgtag-jenkins-instance", "sgtag-test" ]
   
   boot_disk {
     initialize_params {
