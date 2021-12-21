@@ -33,6 +33,10 @@ resource "google_compute_instance" "default" {
     }
   }
 
+  labels = {
+    cpu = "1"
+  }
+
  
  
   metadata = {
