@@ -11,6 +11,7 @@ resource "google_compute_instance" "default" {
   name         = var.VM_NAME
   machine_type = var.VM_MACHINE_TYPE
   zone         = var.VM_ZONE
+  allow_stopping_for_update = true
 
 
   metadata_startup_script = data.template_cloudinit_config.cloudinit-jenkins.rendered
