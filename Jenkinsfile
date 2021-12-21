@@ -26,6 +26,7 @@
       stage('TF Apply') {
         steps {
           sh 'terraform apply --auto-approve'
+          sh 'gcloud projects list'
         }
       }
     } 

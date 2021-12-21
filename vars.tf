@@ -1,5 +1,5 @@
 variable "VM_NAME"{
-    default = "vm-terraform-test"
+    default = "vm-terraform-test-gcloud"
 }
 
 variable "VM_ZONE"{
