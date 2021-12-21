@@ -56,4 +56,53 @@ resource "google_compute_instance" "default" {
   
 }
 
+resource "google_compute_instance" "default22"{
+  name         = "default22"
+  machine_type = var.VM_MACHINE_TYPE
+  zone         = var.VM_ZONE
+  allow_stopping_for_update = true
+
+
+  metadata_startup_script = data.template_cloudinit_config.cloudinit-jenkins.rendered
+
+
+
+  tags = ["sgtag-jenkins-ssh", "sgtag-jenkins-web","sgtag-jenkins-instance", "sgtag-test" ]
+  
+  boot_disk {
+    initialize_params {
+      image = "centos-cloud/centos-7"
+      type = "pd-standard"
+      size = 20
+    }
+  }
+  network_interface {
+    subnetwork = data.google_compute_subnetwork.subnet4.self_link
+    access_config {
+    }
+  }
+
+  labels = {
+    cpu = "1"
+  }
+
+ 
+ 
+  metadata = {
+    foo = "bar"    
+    serial-port-enable = false
+    block-project-ssh-keys = true
+
+  }
+
+
+  service_account {
+    # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
+    scopes = ["storage-rw"]
+  }
+
+
+  
+}
+
 
