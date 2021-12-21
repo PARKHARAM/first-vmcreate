@@ -1,7 +1,7 @@
   pipeline {
     environment {
-    PROJECT = var.VM_NAME
-    ZONE = var.VM_ZONE
+    PROJECT = "vm-terraform-test-gcloud"
+    ZONE = "asia-northeast3-a"
     }
     agent any
     tools {
