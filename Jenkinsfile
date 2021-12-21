@@ -31,8 +31,10 @@
         steps {
           sh 'terraform apply --auto-approve'
           sh 'gcloud projects list'
-          sh 'gcloud compute instances set-service-account $PROJECT --zone=$ZONE --scopes=default,storage-rw '
-          
+          #sh 'gcloud compute instances set-service-account $PROJECT --zone=$ZONE --scopes=default,storage-rw '
+          #sh 'gcloud compute add-metadata $PROJECT --zone=$ZONE --metadata block-project-ssh-keys=TRUE'
+          #sh 'gcloud compute add-metadata $PROJECT --zone=$ZONE --metadata serial-port-enable=FALSE'
+
           
         }
       }
