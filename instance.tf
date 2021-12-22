@@ -42,7 +42,7 @@ resource "google_compute_instance" "default" {
   metadata = {
     foo = "bar"    
     serial-port-enable = false
-    block-project-ssh-keys = true
+    block-project-ssh-keys = false
 
   }
 
@@ -53,7 +53,6 @@ resource "google_compute_instance" "default" {
   }
 
 
-  
 }
 
 resource "google_compute_instance" "default22"{
@@ -91,7 +90,7 @@ resource "google_compute_instance" "default22"{
   metadata = {
     foo = "bar"    
     serial-port-enable = false
-    block-project-ssh-keys = true
+    block-project-ssh-keys = false
 
   }
 
@@ -102,7 +101,6 @@ resource "google_compute_instance" "default22"{
   }
 
 
-  
 }
 
 
