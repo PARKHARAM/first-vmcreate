@@ -1,6 +1,7 @@
 data "template_file" "jenkins-init"{
     template = file("/var/lib/jenkins/code.sh")
 
+
     vars ={
         JENKINS_VERSION = var.JENKINS_VERSION
         TERRAFORM_VERSION = var.TERRAFORM_VERSION
