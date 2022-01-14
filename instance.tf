@@ -1,8 +1,8 @@
 
 provider "google" {
   version = "3.5.0"
-  credentials = "/var/lib/jenkins/pjt-an3-gketest-dev-78cdd3d69f38.json"
-  project = "pjt-an3-gketest-dev"
+  credentials = "/var/lib/jenkins/eloquent-marker-338005-1fa6b785f519.json"
+  project = "My Project 24416"
   region  = "asia-northeast3"
   zone    = "asia-northeast3-a"
 }
