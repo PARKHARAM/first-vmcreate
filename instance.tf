@@ -2,7 +2,7 @@
 provider "google" {
   version = "3.5.0"
   credentials = "/var/lib/jenkins/eloquent-marker-338005-1fa6b785f519.json"
-  project = "My Project 24416"
+  project = "eloquent-marker-338005"
   region  = "asia-northeast3"
   zone    = "asia-northeast3-a"
 }
