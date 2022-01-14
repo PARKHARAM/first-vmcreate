@@ -7,7 +7,7 @@ variable "VM_ZONE"{
 }
 
 variable "VM_MACHINE_TYPE"{
-    default = "n1-standard-2"
+    default = "n1-standard-1"
 }
 
 variable "JENKINS_VERSION"{
