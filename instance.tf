@@ -18,7 +18,7 @@ resource "google_compute_instance" "default" {
 
 
 
-  tags = ["sgtag-jenkins-ssh", "sgtag-jenkins-web","sgtag-jenkins-instance", "sgtag-test" ]
+  tags = ["sgtag-jenkins-ssh", "sgtag-jenkins-web","sgtag-jenkins-instance", "sgtag-test", "sgtag-80"]
   
   boot_disk {
     initialize_params {
@@ -66,7 +66,7 @@ resource "google_compute_instance" "default22"{
 
 
 
-  tags = ["sgtag-jenkins-ssh", "sgtag-jenkins-web","sgtag-jenkins-instance", "sgtag-test" ]
+  tags = ["sgtag-jenkins-ssh", "sgtag-jenkins-web","sgtag-jenkins-instance", "sgtag-test", "sgtag-80" ]
   
   boot_disk {
     initialize_params {
@@ -113,7 +113,7 @@ resource "google_compute_instance" "default252"{
 
 
 
-  tags = ["sgtag-jenkins-ssh", "sgtag-jenkins-web","sgtag-jenkins-instance", "sgtag-test" ]
+  tags = ["sgtag-jenkins-ssh", "sgtag-jenkins-web","sgtag-jenkins-instance", "sgtag-test" ,"sgtag-80"]
   
   boot_disk {
     initialize_params {
