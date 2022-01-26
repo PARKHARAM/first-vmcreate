@@ -21,6 +21,7 @@
       stage('TF Init&Plan') {
         steps {
           sh 'pwd'
+          sh 'ls -al'
           
         }      
       }
