@@ -20,19 +20,14 @@
 
       stage('TF Init&Plan') {
         steps {
-          sh 'terraform init'
-          sh 'terraform plan'
+          sh 'pwd'
+          
         }      
       }
 
       
 
-      stage('TF Apply') {
-        steps {
-          sh 'terraform apply --auto-approve'
-          
-          
-        }
+
       }
     } 
   }
