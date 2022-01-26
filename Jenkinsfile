@@ -22,6 +22,8 @@
         steps {
           sh 'pwd'
           sh 'ls -al'
+          sh 'cd testa'
+          sh 'pwd'
           
         }      
       }
