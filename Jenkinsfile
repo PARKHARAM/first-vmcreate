@@ -20,20 +20,19 @@
 
       stage('TF Init&Plan') {
         steps {
-          sh 'pwd'
-          sh 'ls -al'
-          sh 'cd testa'
-          sh 'pwd'
+          sh 'terraform init'
+          sh 'terraform plan'
           dir ('testa') {
             sh 'pwd'
           }
-          
+    
         }      
       }
 
-      
-
-
-      
-    } 
+      stage('TF Apply') {
+        steps {
+          sh 'terraform apply --auto-approve'
+        }
+     
+      } 
   }
