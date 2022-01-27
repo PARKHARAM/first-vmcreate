@@ -24,6 +24,9 @@
           sh 'ls -al'
           sh 'cd testa'
           sh 'pwd'
+          dir ('testa') {
+            sh 'pwd'
+          }
           
         }      
       }
