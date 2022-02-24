@@ -10,28 +10,25 @@ pipeline {
     }
 
     stages {  
-
-      stage('Git Checkout') {
-        steps {
-          git branch: 'main', credentialsId: 'gkfka133', url: 'https://github.com/PARKHARAM/vmcreate-terraform' 
-         
-        }      
+        stage('Git Checkout') {
+            steps {
+                git branch: 'main', credentialsId: 'gkfka133', url: 'https://github.com/PARKHARAM/vmcreate-terraform' 
+         }      
       }
-
-      stage('TF Init&Plan') {
-        steps {
-          sh 'terraform init'
-          sh 'terraform plan'
-          dir ('testa') {
-            sh 'pwd'
-          }
+        stage('TF Init&Plan') {
+            steps {
+                sh 'terraform init'
+                sh 'terraform plan'
+                dir ('testa') {
+                    sh 'pwd'
+            }
     
-        }      
+         }      
       }
 
-      stage('TF Apply') {
-        steps {
-          sh 'terraform apply --auto-approve'
+        stage('TF Apply') {
+            steps {
+                sh 'terraform apply --auto-approve'
         }
               
         stage('SonarQube analysis') {
