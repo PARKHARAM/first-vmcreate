@@ -26,10 +26,7 @@ pipeline {
          }      
       }
 
-        stage('TF Apply') {
-            steps {
-                sh 'terraform apply --auto-approve'
-        }
+
               
         stage('SonarQube analysis') {
             steps{
@@ -62,7 +59,11 @@ pipeline {
                 }
             }
         }
+        stage('TF Apply') {
+            steps {
+                sh 'terraform apply --auto-approve'
+                }
+        }
         
      } 
-  }
 }
