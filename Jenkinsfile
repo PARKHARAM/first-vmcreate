@@ -35,7 +35,7 @@ pipeline {
                     //sh "mvn -version"
                     sh "mvn clean package"
                     
-                    //sh "mvn sonar:sonar -Dsonar.projectKey=demo -Dsonar.host.url=http://34.64.88.47:9000/ -Dsonar.login=9f40ea6d870c2c7b24f4ecc6f40350b8030a170a"
+                    sh "mvn sonar:sonar -Dsonar.projectKey=demo -Dsonar.host.url=http://34.64.88.47:9000/ -Dsonar.login=9f40ea6d870c2c7b24f4ecc6f40350b8030a170a"
                 }
             }
         }
