@@ -1,4 +1,4 @@
-  pipeline {
+pipeline {
     environment {
     PROJECT = "vm-terraform-test-gcloud"
     ZONE = "asia-northeast3-a"
@@ -22,6 +22,9 @@
         steps {
           sh 'terraform init'
           sh 'terraform plan'
+          dir ('testa') {
+            sh 'pwd'
+          }
     
         }      
       }
@@ -62,6 +65,6 @@
                 }
             }
         }
-     
-      } 
+        
+     } 
   }
