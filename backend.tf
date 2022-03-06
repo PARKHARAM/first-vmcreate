@@ -4,8 +4,8 @@ terraform{
     }
 
     backend "gcs"{
-        credentials = "/var/lib/jenkins/eloquent-marker-338005-1fa6b785f519.json"
-        bucket      = "haram-test"
+        credentials = "/var/lib/jenkins/pjt-an3-dev-vm-8b31a81db7eb.json"
+        bucket      = "haram-test-bucket"
         prefix      = "jenkins.terraform.tfstate"
     }
 }
