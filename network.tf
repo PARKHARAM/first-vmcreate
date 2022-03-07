@@ -3,5 +3,6 @@ data "google_compute_subnetwork" "subnet4" {
   project = "pjt-an3-shard-vpc"
   region  = "asia-northeast3"
   
+  
 }
 
