@@ -55,8 +55,8 @@ resource "google_compute_instance" "default" {
 
 }
 
-resource "google_compute_instance" "Jenkins"{
-  name         = "Jenkins"
+resource "google_compute_instance" "test-server"{
+  name         = "test-server"
   machine_type = var.VM_MACHINE_TYPE
   zone         = var.VM_ZONE
   allow_stopping_for_update = true
