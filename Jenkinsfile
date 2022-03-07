@@ -13,7 +13,7 @@ pipeline {
     stages {  
         stage('Git Checkout') {
             steps {
-                git branch: 'main', credentialsId: 'gkfka133', url: 'https://github.com/PARKHARAM/vmcreate-terraform' 
+                git branch: 'main', credentialsId: 'gkfka133', url: 'https://github.com/PARKHARAM/first-vmcreate' 
          }      
       }
         stage('TF Init&Plan') {
